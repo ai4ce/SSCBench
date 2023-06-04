@@ -10,17 +10,17 @@ The [nuScenes dataset](https://www.nuscenes.org/nuscenes) consists of one thousa
 The folder structure of the nuScenes dataset is as follows:
 ```
 dataset/nuScenes/
-|-- trainval
-|   |-- sequences
+|-- trainval # training and validation set
+|   |-- sequences # 500 (train) + 200 (validation) scenes
 |   |   |-- 000000
-|   |   |   |-- image_2
+|   |   |   |-- image_2 # RGB images
 |   |   |   |   |-- 0000.png
 |   |   |   |   |-- 0001.png
 |   |   |   |   |-- ...
-|   |   |   |-- voxels
-|   |   |   |   |-- 0000.bin
-|   |   |   |   |-- 0000.label
-|   |   |   |   |-- 0000.invalid
+|   |   |   |-- voxels # voxelized point clouds
+|   |   |   |   |-- 0000.bin # voxelized input
+|   |   |   |   |-- 0000.label # voxelized label
+|   |   |   |   |-- 0000.invalid # voxelized invalid mask
 |   |   |   |   |-- 0001.bin
 |   |   |   |   |-- 0001.label
 |   |   |   |   |-- 0001.invalid
@@ -28,17 +28,17 @@ dataset/nuScenes/
 |   |   |-- 000001
 |   |   |-- 000002
 |   |   |-- ...
-|   |-- calib.txt
-|   |-- ...
-|-- test
-|   |-- ...
-|-- preprocess
+|   |-- calib.txt # calibration information
+|   |-- ... # other files (not needed)
+|-- test # testing set
+|   |-- ... # same as trainval
+|-- preprocess # preprocessed downsampled labels
 |   |-- trainval
 |   |   |-- labels
 |   |   |   |-- 000000
-|   |   |   |   |-- 0000_1_1.npy
-|   |   |   |   |-- 0000_1_2.npy
-|   |   |   |   |-- 0000_1_8.npy
+|   |   |   |   |-- 0000_1_1.npy # original labels
+|   |   |   |   |-- 0000_1_2.npy # 2x downsampled labels
+|   |   |   |   |-- 0000_1_8.npy # 8x downsampled labels
 |   |   |   |   |-- 0001_1_1.npy
 |   |   |   |   |-- 0001_1_2.npy
 |   |   |   |   |-- 0001_1_8.npy
@@ -46,7 +46,7 @@ dataset/nuScenes/
 |   |   |   |-- 000001
 |   |   |   |-- ...
 |   |-- test
-|   |   |-- ...
+|   |   |-- ... # same as trainval
 ```
 
 For each frame in the dataset, we provide the following information:
