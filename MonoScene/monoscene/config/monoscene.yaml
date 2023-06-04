@@ -1,0 +1,48 @@
+#dataset: "NYU" # "kitti", "kitti_360"
+dataset: waymo
+
+n_relations: 4
+
+enable_log: true
+kitti_root: '/home/duan/data/shl/kitti'
+kitti_preprocess_root: '/home/duan/data/shl/kitti/dataset/preprocess/monoscene'
+kitti_logdir: '/home/duan/shl/Benchmark/MonoScene/logdir/kitti'
+
+kitti_360_root: '/home/duan/data/shl/kitti360/KITTI-360'
+kitti_360_preprocess_root: '/home/duan/data/shl/kitti360/KITTI-360/preprocess/voxformer'
+kitti_360_logdir: '/home/duan/shl/Benchmark/MonoScene/logdir/kitti360'
+
+nuscenes_root: '/'
+nuscenes_preprocess_root: '/preprocess/monoscenes/'
+nuscenes_logdir: '/scratch/xl3136/sscbench/MonoScene/logdir/nuscenes'
+
+waymo_root: '/waymo'
+waymo_preprocess_root: '/preprocess'
+waymo_logdir: '/scratch/xl3136/sscbench/MonoScene/logdir/waymo'
+
+NYU_root: '/path/to/NYU/depthbin'
+NYU_preprocess_root: '/path/to/NYU/preprocess/folder'
+logdir: '/path/to/NYU/logdir'
+
+output_path:  '/scratch/xl3136/sscbench/MonoScene/results/kitti_360/monoscene'
+
+fp_loss: true 
+frustum_size: 8 
+batch_size: 8
+n_gpus: 2
+num_workers_per_gpu: 4
+exp_prefix: "exp"
+run: 1
+lr: 1e-4
+weight_decay: 1e-4 
+
+context_prior: true
+
+relation_loss: true 
+CE_ssc_loss: true
+sem_scal_loss: true
+geo_scal_loss: true
+
+project_1_2: true
+project_1_4: true
+project_1_8: true

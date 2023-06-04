@@ -1,0 +1,104 @@
+# This file is covered by the LICENSE file in the root of this project.
+nbr_classes: 13
+grid_dims: [256, 32, 256]  # (W, H, D)
+labels:
+  10: "car"
+  11: "bicycle"
+  13: "bus"
+  15: "motorcycle"
+  18: "truck"
+  20: "other-vehicle"
+  30: "person"
+  40: "road"
+  48: "sidewalk"
+  49: "other-ground"
+  50: "building"
+  70: "vegetation"
+  99: "other-object"
+color_map: # bgr
+  10: [245, 150, 100]
+  11: [245, 230, 100]
+  13: [250, 80, 100]
+  15: [150, 60, 30]
+  18: [180, 30, 80]
+  20: [255, 0, 0]
+  30: [30, 30, 255]
+  40: [255, 0, 255]
+  48: [75, 0, 75]
+  49: [75, 0, 175]
+  50: [0, 200, 255]
+  70: [0, 175, 0]
+  99: [255, 255, 50]
+content: # as a ratio with the total number of points
+  0: 1.98785873e-01
+  10: 5.77638478e-04  
+  11: 3.68250377e-06
+  15: 5.21755341e-06
+  18: 1.86707793e-04   
+  20: 2.22423703e-04
+  30: 5.49772336e-05
+  40: 8.65070320e-03
+  48: 1.93335044e-03   
+  49: 1.73705954e-04
+  50: 4.92616008e-03
+  70: 4.89254452e-03
+  99: 2.43197941e-05
+# classes that are indistinguishable from single scan or inconsistent in
+# ground truth are mapped to their closest equivalent
+learning_map:
+  10: 1     # "car"
+  11: 2     # "bicycle"
+  13: 5     # "bus" mapped to "other-vehicle" --------------------------mapped
+  15: 3     # "motorcycle"
+  18: 4     # "truck"
+  20: 5     # "other-vehicle"
+  30: 6     # "person"
+  40: 7     # "road"
+  48: 8    # "sidewalk"
+  49: 9    # "other-ground"
+  50: 10    # "building"
+  70: 11    # "vegetation"
+  71: 0    # "trunk"
+  99: 12     # "other-object" 
+  255: 0    # "moving-motorcyclist" to "unlabeled" ------------------mapped
+learning_map_inv: # inverse of previous map
+  0: 0      # "unlabeled", and others ignored
+  1: 10     # "car"
+  2: 11     # "bicycle"
+  3: 15     # "motorcycle"
+  4: 18     # "truck"
+  5: 20     # "other-vehicle"
+  6: 30     # "person"
+  7: 40     # "road"
+  8: 48    # "sidewalk"
+  9: 49    # "other-ground"
+  10: 50    # "building"
+  11: 70    # "vegetation"
+  12: 99    # "other-object"
+learning_ignore: # Ignore classes
+  0: True      # "unlabeled", and others ignored
+  1: False     # "car"
+  2: False     # "bicycle"
+  3: False     # "motorcycle"
+  4: False     # "truck"
+  5: False     # "other-vehicle"
+  6: False     # "person"
+  7: False     # "road"
+  8: False    # "sidewalk"
+  9: False    # "other-ground"
+  10: False    # "building"
+  11: False    # "vegetation"
+  12: False    # "other-object"
+split: # sequence numbers
+  train:
+    - 0
+    - 2
+    - 3
+    - 4
+    - 5
+    - 7
+    - 10
+  valid:
+    - 6
+  test:
+    - 9
