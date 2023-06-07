@@ -5,21 +5,21 @@
 
 <div align="center">  
   
-![](./teaser/Waymo_4M.gif "")
+![](./teaser/Waymo_0_40M.gif "")
   
 SSCBench-Waymo
 </div>
 
 <div align="center">  
   
-![](./teaser/kitti360_3M.gif "")
+![](./teaser/Kitti360.gif "")
   
 SSCBench-KITTI-360
 </div>
 
 <div align="center"> 
   
-![](./teaser/nuScenes_5M.gif "")
+![](./teaser/nuScenes_0_56M.gif "")
 
 SSCBench-nuScenes
 </div>
