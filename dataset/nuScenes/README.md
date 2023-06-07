@@ -7,7 +7,7 @@
 The [nuScenes dataset](https://www.nuscenes.org/nuscenes) consists of one thousand 20-second scenes with labels provided only for the training and validation set, totaling 850 scenes. From the publicly available 850 scenes, we allocate 500 scenes for training, 200 scenes for validation, and 150 scenes for testing. This distribution results in 20,064 frames for training, 8,050 frames for validation, and 5,949 frames for testing, totaling 34,078 frames (~34K). 
 
 ## License
-nuScenes is released under the [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International Public](https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode) License (“CC BY-NC-SA 4.0”). Please check their [Terms of Use](https://www.nuscenes.org/terms-of-use) for more details.
+The nuScenes dataset is released under the [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International Public](https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode) License (“CC BY-NC-SA 4.0”). Please check their [Terms of Use](https://www.nuscenes.org/terms-of-use) for more details.
 
 We release SSCBench-nuScenes under the same license. When you download or use the SSCBench-KITTI-360 from the website or elsewhere, you are agreeing to comply with the terms of the "CC BY-NC-SA 4.0" Licnese.
 

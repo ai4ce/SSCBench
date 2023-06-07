@@ -7,7 +7,7 @@
 KITTI-360 covers a driving distance of 73.7km, comprising 300K images and 80K laser scans. Leveraging the open-source training and validation set, we build SSCBench-KITTI-360 consisting of 9 long sequences. To reduce redundancy, we sample every 5 frames following the SemanticKITTI SSC benchmark. The training set includes 8,487 frames from scenes 00, 02-05, 07, and 10, while the validation set comprises 1,812 frames from scene 06. The testing set comprises 2,566 frames from scene 09. In total, the dataset contains 12,865 frames
 
 ## License
-The KITTI-360 dataset is released under the [Creative Commons Attribution-NonCommercial-ShareAlike 3.0](http://creativecommons.org/licenses/by-nc-sa/3.0/) License ("CC BY-NC-SA 3.0") . Please check their [website](https://www.cvlibs.net/datasets/kitti-360/index.php#:~:text=com/dcmlr/kitti360_ros_player-,Copyright,-All%20datasets%20and) for more details.
+The KITTI-360 dataset is released under the [Creative Commons Attribution-NonCommercial-ShareAlike 3.0](http://creativecommons.org/licenses/by-nc-sa/3.0/) License ("CC BY-NC-SA 3.0"). Please check their [website](https://www.cvlibs.net/datasets/kitti-360/index.php#:~:text=com/dcmlr/kitti360_ros_player-,Copyright,-All%20datasets%20and) for more details.
 
 We release SSCBench-KITTI-360 under the same license. When you download or use the SSCBench-KITTI-360 from the website or elsewhere, you are agreeing to comply with the terms of the "CC BY-NC-SA 3.0" License.
 
