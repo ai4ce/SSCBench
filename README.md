@@ -3,7 +3,7 @@
 # SSCBench: A Large-Scale 3D Semantic Scene Completion Benchmark for Autonomous Driving
 <div align="center">  
   
-![](./teaser/kitti.gif "")
+![](./teaser/kitti_.gif "")
   
 SSCBench-KITTI-360
 </div>
@@ -11,14 +11,14 @@ SSCBench-KITTI-360
 </div>
 <div align="center"> 
   
-![](./teaser/nuscenes.gif "")
+![](./teaser/nuscenes_.gif "")
 
 SSCBench-nuScenes
 </div>
 
 <div align="center">  
   
-![](./teaser/waymo.gif "")
+![](./teaser/waymo_.gif "")
   
 SSCBench-Waymo
 </div>
