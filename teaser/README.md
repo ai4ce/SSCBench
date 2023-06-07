@@ -1,1 +1,1 @@
-This is the archive of our gif files to display.
+This is the archive of our GIF files to display.
