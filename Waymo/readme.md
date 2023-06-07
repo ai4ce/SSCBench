@@ -56,4 +56,4 @@ For each frame in the dataset, we provide the following information:
 For MonoScene and VoxFormer, a preprocessed downsampled version of the dataset is provided in the `preprocess` folder. We provide two scales of downsampled point clouds: 1/1 and 1/8. The downsampled point clouds are stored in the `labels` folder, stored as `.npy` files.
 
 ## Data Download
-SSCBench-Waymo is not publicly available due to Waymo Open Dataset's terms of use. However, we will provide code for data preprocessing for easy accesss to our dataset. You can download Waymo Perception Dataset v1.4.0 directly from [official website]([https://drive.google.com/file/d/1NzN6eqCnuxzau0m_N9B02Q2zwLBKhnBp/view?usp=share_link](https://waymo.com/intl/en_us/open/download/)).
+SSCBench-Waymo is not publicly available due to Waymo Open Dataset's terms of use. However, we will provide code for data preprocessing for easy accesss to our dataset. You can download Waymo Perception Dataset v1.4.0 directly from their [official website]([https://drive.google.com/file/d/1NzN6eqCnuxzau0m_N9B02Q2zwLBKhnBp/view?usp=share_link](https://waymo.com/intl/en_us/open/download/)).
