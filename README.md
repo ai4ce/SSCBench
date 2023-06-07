@@ -11,7 +11,7 @@ SSCBench-KITTI-360
 </div>
 <div align="center"> 
   
-![](./teaser/nuscenes_original.gif "")
+![](./teaser/nuscenes.gif "")
 
 SSCBench-nuScenes
 </div>
