@@ -5,7 +5,7 @@
 
 <div align="center">  
   
-![](./teaser/Waymo_0_40M.gif "")
+![](./teaser/Waymo.gif "")
   
 SSCBench-Waymo
 </div>
@@ -19,7 +19,7 @@ SSCBench-KITTI-360
 
 <div align="center"> 
   
-![](./teaser/nuScenes_0_56M.gif "")
+![](./teaser/nuScenes.gif "")
 
 SSCBench-nuScenes
 </div>
