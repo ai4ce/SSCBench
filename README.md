@@ -5,7 +5,7 @@
 
 <div align="center">  
   
-![](./teaser/Waymo.gif "")
+![](./teaser/Waymo_37M.gif "")
   
 SSCBench-Waymo
 </div>
