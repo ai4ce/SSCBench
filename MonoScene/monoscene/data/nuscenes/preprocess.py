@@ -68,7 +68,7 @@ def main(config: DictConfig):
         out_dir = os.path.join(config.nuscenes_preprocess_root, "labels", sequence)
         os.makedirs(out_dir, exist_ok=True)
 
-        downscaling = {"1_1": 1, "1_8": 8}
+        downscaling = {"1_1": 1, "1_2": 2, "1_8": 8}
 
         for i in range(len(label_paths)):
 
@@ -91,7 +91,7 @@ def main(config: DictConfig):
                 label_filename = os.path.join(out_dir, filename)
                 # If files have not been created...
                 if not os.path.exists(label_filename):
-                    if scale == "1_8":
+                    if scale != "1_1":
                         LABEL_ds = _downsample_label(
                             LABEL, (256, 256, 32), downscaling[scale]
                         )

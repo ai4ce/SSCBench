@@ -31,7 +31,7 @@ class NuScenesDataset(Dataset):
         elif self.split == "test":
             self.root = os.path.join(root, "test")
             self.label_root = os.path.join(preprocess_root, "test", "labels")
-        self.n_classes = 13
+        self.n_classes = 11
         # splits = {
         #     "train": ["00", "01", "02", "03", "04", "05", "06", "07", "09", "10"],
         #     "val": ["08"],
@@ -142,24 +142,24 @@ class NuScenesDataset(Dataset):
         data["CP_mega_matrix"] = CP_mega_matrix
 
         # Compute the masks, each indicate the voxels of a local frustum
-        if self.split != "test":
-            projected_pix_output = data["projected_pix_{}".format(self.output_scale)]
-            pix_z_output = data[
-                "pix_z_{}".format(self.output_scale)
-            ]
-            frustums_masks, frustums_class_dists = compute_local_frustums(
-                projected_pix_output,
-                pix_z_output,
-                target,
-                self.img_W,
-                self.img_H,
-                dataset="kitti",
-                n_classes=13,
-                size=self.frustum_size,
-            )
-        else:
-            frustums_masks = None
-            frustums_class_dists = None
+        # if self.split != "test":
+        projected_pix_output = data["projected_pix_{}".format(self.output_scale)]
+        pix_z_output = data[
+            "pix_z_{}".format(self.output_scale)
+        ]
+        frustums_masks, frustums_class_dists = compute_local_frustums(
+            projected_pix_output,
+            pix_z_output,
+            target,
+            self.img_W,
+            self.img_H,
+            dataset="kitti",
+            n_classes=11,
+            size=self.frustum_size,
+        )
+        # else:
+        #     frustums_masks = None
+        #     frustums_class_dists = None
         data["frustums_masks"] = frustums_masks
         data["frustums_class_dists"] = frustums_class_dists
 

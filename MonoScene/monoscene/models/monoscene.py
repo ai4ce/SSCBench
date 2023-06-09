@@ -164,6 +164,17 @@ class MonoScene(pl.LightningModule):
         ssc_pred = out_dict["ssc_logit"] # ssc_pred.shape:  torch.Size([1, 19, 256, 256, 32])
         # print(batch.keys())
         target = batch["target"] # target.shape:  torch.Size([1, 256, 256, 32])
+
+        # # eval range == 25.6: mono2
+        # target[:, 128:, :,:] = 255
+        # target[:, :, :64, :] = 255
+        # target[:, :, 192:, :] = 255
+
+        # # eval_range == 12.8: mono3
+        # target[:, 64:, :,:] = 255
+        # target[ :, :, :96, :] = 255
+        # target[:, :, 160:, :] = 255
+
         # print("target.shape: ", target.shape)
         # print("ssc_pred.shape: ", ssc_pred.shape)
 

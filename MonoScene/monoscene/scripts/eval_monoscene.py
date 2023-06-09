@@ -2,6 +2,7 @@ from pytorch_lightning import Trainer
 from monoscene.models.monoscene import MonoScene
 from monoscene.data.NYU.nyu_dm import NYUDataModule
 from monoscene.data.semantic_kitti.kitti_dm import KittiDataModule
+from monoscene.data.nuscenes.nuscenes_dm import NuScenesDataModule
 import hydra
 from omegaconf import DictConfig
 import torch
@@ -26,6 +27,19 @@ def main(config: DictConfig):
             num_workers=int(config.num_workers_per_gpu * config.n_gpus),
         )
 
+    elif config.dataset == "nuscenes":
+        full_scene_size = (256, 256, 32)
+        project_scale = 2
+        feature = 64
+        n_classes = 13
+        data_module = NuScenesDataModule(
+            root=config.nuscenes_root,
+            preprocess_root=config.nuscenes_preprocess_root,
+            frustum_size=config.frustum_size,
+            batch_size=int(config.batch_size / config.n_gpus),
+            num_workers=int(config.num_workers_per_gpu),
+        )
+
     elif config.dataset == "NYU":
         config.batch_size = 2
         project_scale = 1
@@ -42,13 +56,18 @@ def main(config: DictConfig):
         )
 
     trainer = Trainer(
-        sync_batchnorm=True, deterministic=True, gpus=config.n_gpus, accelerator="ddp"
+        sync_batchnorm=True, deterministic=True, gpus=config.n_gpus, accelerator="gpu"
     )
 
     if config.dataset == "NYU":
         model_path = os.path.join(
             get_original_cwd(), "trained_models", "monoscene_nyu.ckpt"
         )
+    elif config.dataset == "nuscenes":
+        # model_path = os.path.join(
+        #     get_original_cwd(), "trained_models", "monoscene_nuscenes.ckpt"
+        # )
+        model_path = "/scratch/xl3136/sscbench/MonoScene/logdir/nuscenes/exp_nuscenes_1_FrusSize_8_nRelations4_WD0.0001_lr0.0001_CEssc_geoScalLoss_semScalLoss_fpLoss_CERel_3DCRP_Proj_2_4_8/checkpoints/epoch=022-val/mIoU=0.10785.ckpt"
     else:
         model_path = os.path.join(
             get_original_cwd(), "trained_models", "monoscene_kitti.ckpt"
@@ -63,8 +82,8 @@ def main(config: DictConfig):
     )
     model.eval()
     data_module.setup()
-    val_dataloader = data_module.val_dataloader()
-    trainer.test(model, test_dataloaders=val_dataloader)
+    test_dataloader = data_module.test_dataloader()
+    trainer.test(model, test_dataloaders=test_dataloader)
 
 
 if __name__ == "__main__":

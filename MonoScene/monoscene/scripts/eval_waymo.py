@@ -11,7 +11,7 @@ from hydra.utils import get_original_cwd
 @hydra.main(config_name="../config/monoscene.yaml")
 def main(config: DictConfig):
     torch.set_grad_enabled(False)
-    config.batch_size = 1
+    config.batch_size = 16
     n_classes = 16
     feature = 64
     # n_gpus=1 
@@ -43,10 +43,10 @@ def main(config: DictConfig):
     #     )
 
     trainer = Trainer(
-        sync_batchnorm=True, deterministic=True, gpus=config.n_gpus, accelerator="ddp"
+        sync_batchnorm=True, deterministic=True, gpus=config.n_gpus, accelerator="gpu"
     )
 
-    model_path = '/home/duan/shl/Benchmark/MonoScene/logdir/kitti360/exp_kitti_360_1_FrusSize_8_nRelations4_WD0.0001_lr0.0001_CEssc_geoScalLoss_semScalLoss_fpLoss_CERel_3DCRP_Proj_2_4_8/checkpoints/last.ckpt'
+    model_path = '/scratch/xl3136/sscbench/MonoScene/logdir/waymo/exp_waymo_1_FrusSize_8_nRelations4_WD0.0001_lr0.0001_CEssc_geoScalLoss_semScalLoss_fpLoss_CERel_3DCRP_Proj_2_4_8/checkpoints/epoch=012-val/mIoU=0.10993.ckpt'
     model = MonoScene.load_from_checkpoint(
         model_path,
         feature=feature,

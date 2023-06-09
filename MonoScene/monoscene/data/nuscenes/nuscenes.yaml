@@ -1,5 +1,5 @@
 # This file is covered by the LICENSE file in the root of this project.
-nbr_classes: 13
+nbr_classes: 11
 grid_dims: [256, 32, 256]  # (W, H, D)
 labels:
   10: "car"
@@ -45,60 +45,87 @@ content: # as a ratio with the total number of points
   99: 2.43197941e-05
 # classes that are indistinguishable from single scan or inconsistent in
 # ground truth are mapped to their closest equivalent
+# learning_map:
+#   10: 1     # "car"
+#   11: 2     # "bicycle"
+#   13: 5     # "bus" mapped to "other-vehicle" --------------------------mapped
+#   15: 3     # "motorcycle"
+#   18: 4     # "truck"
+#   20: 5     # "other-vehicle"
+#   30: 6     # "person"
+#   40: 7     # "road"
+#   48: 8    # "sidewalk"
+#   49: 9    # "other-ground"
+#   50: 10    # "building"
+#   70: 11    # "vegetation"
+#   71: 0    # "trunk"
+#   99: 12     # "other-object" 
+#   255: 0    # "moving-motorcyclist" to "unlabeled" ------------------mapped
+# learning_map_inv: # inverse of previous map
+#   0: 0      # "unlabeled", and others ignored
+#   1: 10     # "car"
+#   2: 11     # "bicycle"
+#   3: 15     # "motorcycle"
+#   4: 18     # "truck"
+#   5: 20     # "other-vehicle"
+#   6: 30     # "person"
+#   7: 40     # "road"
+#   8: 48    # "sidewalk"
+#   9: 49    # "other-ground"
+#   10: 50    # "building"
+#   11: 70    # "vegetation"
+#   12: 99    # "other-object"
+# learning_ignore: # Ignore classes
+#   0: True      # "unlabeled", and others ignored
+#   1: False     # "car"
+#   2: False     # "bicycle"
+#   3: False     # "motorcycle"
+#   4: False     # "truck"
+#   5: False     # "other-vehicle"
+#   6: False     # "person"
+#   7: False     # "road"
+#   8: False    # "sidewalk"
+#   9: False    # "other-ground"
+#   10: False    # "building"
+#   11: False    # "vegetation"
+#   12: False    # "other-object"
 learning_map:
   10: 1     # "car"
   11: 2     # "bicycle"
-  13: 5     # "bus" mapped to "other-vehicle" --------------------------mapped
+  13: 1     # "bus" mapped to "car" --------------------------mapped
   15: 3     # "motorcycle"
-  18: 4     # "truck"
-  20: 5     # "other-vehicle"
-  30: 6     # "person"
-  40: 7     # "road"
-  48: 8    # "sidewalk"
-  49: 9    # "other-ground"
-  50: 10    # "building"
-  70: 11    # "vegetation"
-  71: 0    # "trunk"
-  99: 12     # "other-object" 
+  18: 1     # "truck" mapped to "car" --------------------------mapped
+  20: 1     # "other-vehicle" mapped to "car" --------------------------mapped
+  30: 4     # "person"
+  40: 5     # "road"
+  48: 6    # "sidewalk"
+  49: 7    # "other-ground"
+  50: 8    # "building"
+  70: 9    # "vegetation"
+  71: 9    # "trunk" mapped to "vegetation" --------------------------mapped
+  99: 10     # "other-object" 
   255: 0    # "moving-motorcyclist" to "unlabeled" ------------------mapped
 learning_map_inv: # inverse of previous map
   0: 0      # "unlabeled", and others ignored
   1: 10     # "car"
   2: 11     # "bicycle"
   3: 15     # "motorcycle"
-  4: 18     # "truck"
-  5: 20     # "other-vehicle"
-  6: 30     # "person"
-  7: 40     # "road"
-  8: 48    # "sidewalk"
-  9: 49    # "other-ground"
-  10: 50    # "building"
-  11: 70    # "vegetation"
-  12: 99    # "other-object"
+  4: 30     # "person"
+  5: 40     # "road"
+  6: 48    # "sidewalk"
+  7: 49    # "other-ground"
+  8: 50    # "building"
+  9: 70    # "vegetation"
+  10: 99    # "other-object"
 learning_ignore: # Ignore classes
   0: True      # "unlabeled", and others ignored
   1: False     # "car"
   2: False     # "bicycle"
   3: False     # "motorcycle"
-  4: False     # "truck"
-  5: False     # "other-vehicle"
-  6: False     # "person"
-  7: False     # "road"
-  8: False    # "sidewalk"
-  9: False    # "other-ground"
-  10: False    # "building"
-  11: False    # "vegetation"
-  12: False    # "other-object"
-split: # sequence numbers
-  train:
-    - 0
-    - 2
-    - 3
-    - 4
-    - 5
-    - 7
-    - 10
-  valid:
-    - 6
-  test:
-    - 9
+  4: False     # "person"
+  5: False     # "road"
+  6: False    # "sidewalk"
+  7: False    # "other-ground"
+  8: False    # "building"
+  9: False    # "vegetation"
+  10: False    # "other-object"

@@ -273,10 +273,10 @@ class WaymoDataset(Dataset):
         # PIL to numpy
         img = np.array(img, dtype=np.float32, copy=False) / 255.0
 
-        # from scipy.ndimage import zoom
-        # img = zoom(img, (0.5, 0.5, 1))
+        from scipy.ndimage import zoom
+        img = zoom(img, (0.5, 0.5, 1))
 
-        img = img[:640, :960, :]  # crop image
+        # img = img[:640, :960, :]  # crop image
 
         # Fliplr the image
         if np.random.rand() < self.fliplr:

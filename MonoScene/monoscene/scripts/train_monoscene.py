@@ -1,5 +1,6 @@
 from monoscene.data.semantic_kitti.kitti_dm import KittiDataModule
 from monoscene.data.kitti_360.kitti_360_dm import Kitti360DataModule
+from monoscene.data.nuscenes.nuscenes_dm import NuScenesDataModule
 from monoscene.data.semantic_kitti.params import (
     semantic_kitti_class_frequencies,
     kitti_class_names,
@@ -8,6 +9,11 @@ from monoscene.data.semantic_kitti.params import (
 from monoscene.data.kitti_360.params import (
     kitti_360_class_frequencies,
     kitti_360_class_names,
+)
+
+from monoscene.data.nuscenes.params import (
+    nuscenes_class_frequencies,
+    nuscenes_class_names,
 )
 
 from monoscene.data.NYU.params import (
@@ -91,7 +97,25 @@ def main(config: DictConfig):
             num_workers=int(config.num_workers_per_gpu),
         )
 
-
+    elif config.dataset == "nuscenes":
+        class_names = nuscenes_class_names
+        max_epochs = 30
+        logdir = config.nuscenes_logdir
+        full_scene_size = (256, 256, 32)
+        project_scale = 2
+        feature = 64
+        n_classes = 11
+        class_weights = torch.from_numpy(
+            1 / np.log(nuscenes_class_frequencies + 0.001)
+        )
+        data_module = NuScenesDataModule(
+            root=config.nuscenes_root,
+            preprocess_root=config.nuscenes_preprocess_root,
+            frustum_size=config.frustum_size,
+            project_scale=project_scale,
+            batch_size=int(config.batch_size / config.n_gpus),
+            num_workers=int(config.num_workers_per_gpu),
+        )
 
     elif config.dataset == "NYU":
         class_names = NYU_class_names

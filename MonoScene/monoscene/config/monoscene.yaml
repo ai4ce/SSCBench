@@ -1,5 +1,5 @@
 #dataset: "NYU" # "kitti", "kitti_360"
-dataset: waymo
+dataset: nuscenes
 
 n_relations: 4
 
@@ -13,7 +13,7 @@ kitti_360_preprocess_root: '/home/duan/data/shl/kitti360/KITTI-360/preprocess/vo
 kitti_360_logdir: '/home/duan/shl/Benchmark/MonoScene/logdir/kitti360'
 
 nuscenes_root: '/'
-nuscenes_preprocess_root: '/preprocess/monoscenes/'
+nuscenes_preprocess_root: '/preprocess_uni/monoscenes/'
 nuscenes_logdir: '/scratch/xl3136/sscbench/MonoScene/logdir/nuscenes'
 
 waymo_root: '/waymo'
@@ -29,7 +29,7 @@ output_path:  '/scratch/xl3136/sscbench/MonoScene/results/kitti_360/monoscene'
 fp_loss: true 
 frustum_size: 8 
 batch_size: 8
-n_gpus: 2
+n_gpus: 4
 num_workers_per_gpu: 4
 exp_prefix: "exp"
 run: 1
