@@ -1,15 +1,15 @@
 #!/bin/bash
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
-#SBATCH --cpus-per-task=20
-#SBATCH --time=48:00:00
-#SBATCH --mem=96GB
+#SBATCH --cpus-per-task=10
+#SBATCH --time=4:00:00
+#SBATCH --mem=16GB
 #SBATCH --job-name=monoscene
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user=xl3136@nyu.edu
-#SBATCH --output=log/mono_%j.out
-#SBATCH --error=log/mono_%j.err
-#SBATCH --gres=gpu:a100:4
+#SBATCH --output=log/dm_%j.out
+#SBATCH --error=log/dm_%j.err
+#SBATCH --gres=gpu:a100:1
 
 
 module purge
@@ -22,4 +22,4 @@ singularity exec --nv \
 	    /scratch/work/public/singularity/cuda10.2-cudnn8-devel-ubuntu18.04.sif \
 	    /bin/bash -c "source /ext3/env.sh; 
         conda activate monoscene; 
-        python monoscene/scripts/train_monoscene_waymo.py"
+        python monoscene/scripts/eval_waymo.py"
