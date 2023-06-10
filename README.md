@@ -3,7 +3,7 @@
 [Yiming Li*](https://roboticsyimingli.github.io/), 
 [Sihang Li*](https://louis-leee.github.io/), 
 [Xinhao Liu*](https://gaaaavin.github.io/), 
-[Moonjun Gong*](https://github.com/ai4ce/SSCBench), 
+[Moonjun Gong*](https://moonjungong.github.io/), 
 [Kenan Li](https://github.com/ai4ce/SSCBench), 
 [Nuo Chen](https://github.com/ai4ce/SSCBench), 
 [Zijun Wang](https://github.com/ai4ce/SSCBench), 
