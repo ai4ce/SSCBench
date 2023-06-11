@@ -1,7 +1,7 @@
 # SSCBench-Waymo
 
 ## Change Log
-* 2023/06: Initial release.
+* 2023/06: The code for downloading and processing will be released soon.
 
 ## SSCBench-Waymo Overview
 The Waymo dataset consists of 1000 scenes for training and validation, as well as 150 scenes for testing, with each scene spanning 20 seconds. We utilize the open-source training and validation scenes and redistribute them into sets of 500, 298, and 202 scenes for training, validation, and testing, respectively. In order to reduce redundancy and training time for our benchmark, we downsample the original data by a factor of 10. This downsampling results in a training set of 10,011 frames, a validation set of 5,936 frames, and a test set of 4,038 frames, totaling 19,985 frames
