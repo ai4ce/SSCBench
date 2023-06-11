@@ -56,3 +56,6 @@ If this work is helpful for your research, please cite the following BibTeX entr
       year={2023}
 }
 ```
+
+## Star History
+[![Star History Chart](https://api.star-history.com/svg?repos=ai4ce/SSCBench&type=Date)](https://star-history.com/#ai4ce/SSCBench&Date)
