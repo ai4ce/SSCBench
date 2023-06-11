@@ -49,7 +49,7 @@ For more details, please refer to the [dataset](./dataset) folder file.
 If this work is helpful for your research, please cite the following BibTeX entry.
 
 ```
-@InProceedings{li2023voxformer,
+@InProceedings{li2023sscbench,
       title={SSCBench: A Large-Scale 3D Semantic Scene Completion Benchmark for Autonomous Driving}, 
       author={Li, Yiming and Li, Sihang and Liu, Xinhao and Gong, Moonjun and Li, Kenan and Chen, Nuo and Wang, Zijun and Li, Zhiheng and Jiang, Tao and Yu, Fisher and Wang, Yue and Zhao, Hang and Yu, Zhiding and Feng, Chen},
       booktitle = {arxiv},
