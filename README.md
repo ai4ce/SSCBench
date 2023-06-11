@@ -12,8 +12,8 @@
 [Fisher Yu](https://www.yf.io/), 
 [Yue Wang](https://yuewang.xyz/), 
 [Hang Zhao](https://hangzhaomit.github.io/), 
-[Zhiding Yu](https://scholar.google.com/citations?user=1VI_oYUAAAAJ&hl=en), 
-[Chen Feng](https://scholar.google.com/citations?user=YeG8ZM0AAAAJ&hl=en)
+[Zhiding Yu](https://chrisding.github.io/), 
+[Chen Feng](https://engineering.nyu.edu/faculty/chen-feng)
 
 [[PDF]](https://github.com/ai4ce/SSCBench/) [[Project]](https://github.com/ai4ce/SSCBench/) 
 
