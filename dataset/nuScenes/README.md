@@ -64,6 +64,6 @@ For each frame in the dataset, we provide the following information:
 For MonoScene and VoxFormer, a preprocessed downsampled version of the dataset is provided in the `preprocess` folder. We provide two scales of downsampled point clouds: 1/1 and 1/8. The downsampled point clouds are stored in the `labels` folder, stored as `.npy` files.
 
 ## Data Download
-The dataset can be downloaded from [goole drive](https://drive.google.com/drive/folders/1cERh6BgWM457t0pg08hLIKYMbsuandbv?usp=drive_link). The dataset is provided in the form of squashed file system for easy use for singularity containers. 
+The dataset can be downloaded from [google drive](https://drive.google.com/drive/folders/1cERh6BgWM457t0pg08hLIKYMbsuandbv?usp=drive_link). The dataset is provided in the form of squashed file system for easy use for singularity containers. 
 * If you want to use the dataset on a singularity container, you can mount each squashed file system to the container using the `--overlay` option.
 * If you want to use the dataset on a normal system, you can unsquash the file system using the `unsquashfs` command (more details [here](https://manpages.ubuntu.com/manpages/focal/man1/unsquashfs.1.html)). Then, please organize the data as the folder structure described above.
