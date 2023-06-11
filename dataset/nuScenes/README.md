@@ -33,11 +33,18 @@ dataset/nuScenes/
 |   |   |-- 000001
 |   |   |-- 000002
 |   |   |-- ...
+|   |-- poses # camera poses
+|   |   |-- 000000
+|   |   |   |-- 0000.txt # camera pose for each frame
+|   |   |   |-- 0001.txt
+|   |   |   |-- ...
+|   |   |-- 000001
+|   |   |-- ...
 |   |-- calib.txt # calibration information
 |   |-- ... # other files (not needed)
 |-- test # testing set
 |   |-- ... # same as trainval
-|-- preprocess # preprocessed downsampled labels
+|-- preprocess # preprocessed labels
 |   |-- trainval
 |   |   |-- labels
 |   |   |   |-- 000000
@@ -52,6 +59,8 @@ dataset/nuScenes/
 |   |   |   |-- ...
 |   |-- test
 |   |   |-- ... # same as trainval
+|-- preprocess_uni # unified preprocessed labels
+|   |-- ... # same as preprocess
 ```
 
 For each frame in the dataset, we provide the following information:
