@@ -28,8 +28,8 @@
 
 
 ## News
-- [2023/06]: We release SSCBench-KITTI-360 and SSCBench-nuScenes for academic usage.
-- [2023/06]: SSCBench is submitted to NeurIPS 2023 Track on Datasets and Benchmarks. Our paper will be on arxiv very soon.
+- [2023/06]: We release **SSCBench-KITTI-360** and **SSCBench-nuScenes** for academic usage.
+- [2023/06]: SSCBench is submitted to **NeurIPS 2023 Track on Datasets and Benchmarks**. Our paper will be on arxiv very soon.
 
 ## Abstract
 Semantic scene completion (SSC) is crucial for holistic 3D scene understanding by jointly estimating semantics and geometry from sparse observations. However, progress in SSC, particularly in autonomous driving scenarios, is hindered by the scarcity of  high-quality datasets. To overcome this challenge, we introduce SSCBench, a comprehensive benchmark that integrates scenes from widely-used automotive datasets (e.g., KITTI-360, nuScenes, and Waymo). SSCBench follows an established setup and format in the community, facilitating the easy exploration of the camera- and LiDAR-based SSC across various real-world scenarios. We present quantitative and qualitative evaluations of state-of-the-art algorithms on SSCBench and commit to continuously incorporating novel automotive datasets and SSC algorithms to drive further advancements in this field.
