@@ -15,7 +15,7 @@
 [Zhiding Yu](https://chrisding.github.io/), 
 [Chen Feng](https://engineering.nyu.edu/faculty/chen-feng)
 
-[[PDF]](https://github.com/ai4ce/SSCBench/) [[Project]](https://github.com/ai4ce/SSCBench/) 
+[[PDF]](https://arxiv.org/abs/2306.09001) [[Project]](https://github.com/ai4ce/SSCBench/) 
 
 <p align="center">
 <img src="./teaser/kitti.gif" width="100%"/>
@@ -49,10 +49,10 @@ For more details, please refer to the [dataset](./dataset) folder file.
 If this work is helpful for your research, please cite the following BibTeX entry.
 
 ```
-@InProceedings{li2023sscbench,
+@article{li2023sscbench,
       title={SSCBench: A Large-Scale 3D Semantic Scene Completion Benchmark for Autonomous Driving}, 
       author={Li, Yiming and Li, Sihang and Liu, Xinhao and Gong, Moonjun and Li, Kenan and Chen, Nuo and Wang, Zijun and Li, Zhiheng and Jiang, Tao and Yu, Fisher and Wang, Yue and Zhao, Hang and Yu, Zhiding and Feng, Chen},
-      booktitle = {arxiv},
+      journal={arXiv preprint arXiv:2306.09001},
       year={2023}
 }
 ```
