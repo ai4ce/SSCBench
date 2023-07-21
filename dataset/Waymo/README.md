@@ -1,6 +1,7 @@
 # SSCBench-Waymo
 
 ## Change Log
+* 2023/07: The code for processing is released.
 * 2023/06: The code for downloading and processing will be released soon.
 
 ## SSCBench-Waymo Overview
