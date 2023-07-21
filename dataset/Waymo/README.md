@@ -1,8 +1,8 @@
 # SSCBench-Waymo
 
 ## Change Log
-* 2023/07: The code for processing is released.
-* 2023/06: The code for downloading and processing will be released soon.
+* 2023/07: The [code for generating voxels](https://github.com/ai4ce/SSCBench/tree/main/dataset/Waymo/data_generation) is released.
+* 2023/06: The code for processing will be released soon.
 
 ## SSCBench-Waymo Overview
 The Waymo dataset consists of 1000 scenes for training and validation, as well as 150 scenes for testing, with each scene spanning 20 seconds. We utilize the open-source training and validation scenes and redistribute them into sets of 500, 298, and 202 scenes for training, validation, and testing, respectively. In order to reduce redundancy and training time for our benchmark, we downsample the original data by a factor of 10. This downsampling results in a training set of 10,011 frames, a validation set of 5,936 frames, and a test set of 4,038 frames, totaling 19,985 frames
@@ -67,4 +67,10 @@ For each frame in the dataset, we provide the following information:
 For MonoScene and VoxFormer, a preprocessed downsampled version of the dataset is provided in the `preprocess` folder. We provide two scales of downsampled point clouds: 1/1 and 1/8. The downsampled point clouds are stored in the `labels` folder, stored as `.npy` files.
 
 ## Data Download
-Complying with the Waymo Dataset License Agreement for Non-Commercial Use (August 2019), we are not allowed to redistribute the original data. Instead, we provide a script to download the data from the official Waymo website. Please follow the instructions below to download the data.
+Complying with the Waymo Dataset License Agreement for Non-Commercial Use (August 2019), we are not allowed to redistribute the original data. Please follow the instructions below to download the data.
+
+First, please visit this [site](https://waymo.com/open/licensing/) and agree to the license agreement.
+
+Then, you should be able to download the dataset from [here](https://console.cloud.google.com/storage/browser/waymo_open_dataset_v_1_4_0). Note that we only need the [training](https://console.cloud.google.com/storage/browser/waymo_open_dataset_v_1_4_0/individual_files/training?pageState=(%22StorageObjectListTable%22:(%22f%22:%22%255B%255D%22))&authuser=1&prefix=&forceOnObjectsSortingFiltering=false) and [validation](https://console.cloud.google.com/storage/browser/waymo_open_dataset_v_1_4_0/individual_files/validation?pageState=(%22StorageObjectListTable%22:(%22f%22:%22%255B%255D%22))&authuser=1&prefix=&forceOnObjectsSortingFiltering=false) dataset. There are 1000 tfrecord files in total(798 for training dataset, and 202 for validation dataset).
+## Data Process
+We've released the code for generating voxelized point clouds in [here](https://github.com/ai4ce/SSCBench/tree/main/dataset/Waymo/data_generation).
