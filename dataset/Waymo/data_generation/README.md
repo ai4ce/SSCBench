@@ -29,9 +29,10 @@ To speedup, you can split dataset, change ``start_seq`` and ``end_seq`` value in
 Each file contain ``debug()`` function, change the params and debug as you need
 
 ## Generate calib.txt and images
-This [code](https://github.com/ai4ce/SSCBench/blob/main/dataset/Waymo/data_generation/utils/converter.py) can generate calibration file and front-view images. Run this like this:
+This [code](https://github.com/ai4ce/SSCBench/blob/main/dataset/Waymo/data_generation/utils/converter.py) can generate calibration file and front-view images. We modified our code from [waymo_kitti_converter](https://github.com/caizhongang/waymo_kitti_converter).
+
+You can run it like this:
 
 ```
 python utils/converter.py --split training/validation --start 0 --end 798/202 --save_dir The directory to save converted KITTI-format data --load_dir The directory to load Waymo Open Dataset tfrecords
 ```
-
