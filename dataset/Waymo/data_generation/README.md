@@ -36,3 +36,5 @@ You can run it like this:
 ```
 python utils/converter.py --split training/validation --start 0 --end 798/202 --save_dir The directory to save converted KITTI-format data --load_dir The directory to load Waymo Open Dataset tfrecords
 ```
+## Generate preprocessed downsampled labels
+This [folder](https://github.com/ai4ce/SSCBench/tree/main/dataset/Waymo/data_generation/preprocessing) contains code that can generate preprocessed downsampled labels. We modified them from [LMSCNet](https://github.com/astra-vision/LMSCNet/tree/main#dataset). Please copy these into [this folder](https://github.com/astra-vision/LMSCNet/tree/main/LMSCNet/data) and follow the instructions provided by [LMSCNet](https://github.com/astra-vision/LMSCNet/tree/main#dataset).
