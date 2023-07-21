@@ -10,13 +10,13 @@ $ pip3 install -r requirement.txt
 
 # Get Started
 ## Prerequisites
-Change split = 'training' # 'validation' in waymo_pipline.sh
+Change ``split`` = "training" / "validation" in waymo_pipline.sh
 
 Change input ``tfrecord_dir`` to tfrecord path in config.py
 
 Change output ``output_dir``/``stuff_dir``/``object_dir``/``cam_infos_dir``/``voxel_dir`` in config.py
 
-Change CPU_NUM  in config.py to match your machine
+Change ``CPU_NUM``  in config.py to match your machine
 
 ## Single machine
 ```
