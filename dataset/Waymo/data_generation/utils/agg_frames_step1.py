@@ -84,7 +84,7 @@ import multiprocessing
 
 multiprocessing.set_start_method('forkserver', force=True)
 
-os.environ["CUDA_VISIBLE_DEVICES"] = "-1" # wtf tensorflow
+os.environ["CUDA_VISIBLE_DEVICES"] = "-1" 
 
 import tensorflow as tf
 
