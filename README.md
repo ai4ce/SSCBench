@@ -37,6 +37,11 @@ Semantic scene completion (SSC) is crucial for holistic 3D scene understanding b
 ## SSCBench Dataset
 SSCBench consists of three carefully designed datasets, all based on existing data sources. For more details, please refer to the [dataset](./dataset) folder.
 
+## Model Checkpoints
+We provide the model checkpoints of the experiments reported in the paper. The checkpoints can be accessed on [google drive](https://drive.google.com/drive/folders/1583Xy0nh46vNXg_StWvIp2B8IXij92Bm?usp=sharing). 
+
+Note that the provided checkpoints are trained with the unified class labels. Details of class mappings can be found in the [configs](./dataset/configs) folder.
+
 ## License
 Due to the license of the different original datasets, we release SSCBench under the following licenses:
 - SSCBench-KITTI-360: [CC BY-NC-SA 3.0](https://creativecommons.org/licenses/by-nc-sa/3.0/)
