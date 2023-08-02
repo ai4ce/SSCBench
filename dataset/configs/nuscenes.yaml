@@ -14,7 +14,8 @@ labels:
   49: "other-ground"
   50: "building"
   70: "vegetation"
-  99: "other-object"
+  90: "other-object"
+  99: "other-object2"
 color_map: # bgr
   10: [245, 150, 100]
   11: [245, 230, 100]
@@ -28,6 +29,7 @@ color_map: # bgr
   49: [75, 0, 175]
   50: [0, 200, 255]
   70: [0, 175, 0]
+  90: [255, 255, 50]
   99: [255, 255, 50]
 content: # as a ratio with the total number of points
   0: 1.98785873e-01
@@ -103,6 +105,7 @@ learning_map:
   50: 8    # "building"
   70: 9    # "vegetation"
   71: 9    # "trunk" mapped to "vegetation" --------------------------mapped
+  90: 10    # "other-object" 
   99: 10     # "other-object" 
   255: 0    # "moving-motorcyclist" to "unlabeled" ------------------mapped
 learning_map_inv: # inverse of previous map
