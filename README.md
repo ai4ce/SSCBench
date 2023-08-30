@@ -24,10 +24,13 @@
 <p align="center">SSCBench-nuScenes</p>
 <img src="./teaser/waymo.gif" width="100%"/>
 <p align="center">SSCBench-Waymo</p>
+<img src="./teaser/pandaset.gif" width="100%"/>
+<p align="center">🔥<strong>[New]</strong> SSCBench-PandaSet</p>
 </div>
 
 
 ## News
+- [2023/08]: We add demo for SSCBench-PandaSet. We are working on incoporating the dataset
 - [2023/06]: We release [SSCBench-KITTI-360](dataset/KITTI-360/) and [SSCBench-nuScenes](dataset/nuScenes/) for academic usage.
 - [2023/06]: SSCBench is submitted to **NeurIPS 2023 Track on Datasets and Benchmarks**. The preprint version is available on [arXiv](https://arxiv.org/abs/2306.09001).
 
