@@ -63,14 +63,14 @@ dataset/kitti360/
 |   |   |   |-- 2013_05_28_drive_0010_sync
 |   |   |-- unified # unified
 |   |   |   |-- labels
-|   |   |   |-- 2013_05_28_drive_0000_sync 
-|   |   |   |   |-- 000000_1_1.npy # original labels
-|   |   |   |   |-- 000000_1_8.npy # 8x downsampled labels
-|   |   |   |   |-- 000005_1_1.npy
-|   |   |   |   |-- 000005_1_8.npy
-|   |   |   |   |-- ...
-|   |   |   |-- ... 
-|   |   |   |-- 2013_05_28_drive_0010_sync
+|   |   |   |   |-- 2013_05_28_drive_0000_sync 
+|   |   |   |   |   |-- 000000_1_1.npy # original labels
+|   |   |   |   |   |-- 000000_1_8.npy # 8x downsampled labels
+|   |   |   |   |   |-- 000005_1_1.npy
+|   |   |   |   |   |-- 000005_1_8.npy
+|   |   |   |   |   |-- ...
+|   |   |   |   |-- ... 
+|   |   |   |   |-- 2013_05_28_drive_0010_sync
 |   |-- calibration # preprocessed downsampled labels
 |   |   |-- calib_cam_to_pose.txt
 |   |   |-- calib_cam_to_velo.txt
