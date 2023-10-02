@@ -15,7 +15,7 @@
 [Zhiding Yu](https://chrisding.github.io/), 
 [Chen Feng](https://engineering.nyu.edu/faculty/chen-feng)
 
-[[PDF]](https://arxiv.org/abs/2306.09001)) 
+[[PDF]](https://arxiv.org/abs/2306.09001)
 
 <p align="center">
 <img src="./teaser/kitti.gif" width="100%"/>
