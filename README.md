@@ -1,4 +1,4 @@
-# SSCBench: A Large-Scale 3D Semantic Scene Completion Benchmark for Autonomous Driving
+# SSCBench: Monocular 3D Semantic Scene Completion Benchmark in Street Views
 
 [Yiming Li*](https://roboticsyimingli.github.io/), 
 [Sihang Li*](https://louis-leee.github.io/), 
