@@ -58,6 +58,7 @@ Note that the provided checkpoints are trained with the unified class labels. De
 ## Related Dataset/Benchmark
 - [Occ3D: A Large-Scale 3D Occupancy Prediction Benchmark for Autonomous Driving](https://github.com/Tsinghua-MARS-Lab/Occ3D), arXiv 2023
 - [OpenOccupancy: A Large Scale Benchmark for Surrounding Semantic Occupancy Perception](https://github.com/JeffWang987/OpenOccupancy), ICCV 2023
+- [Occ4cast: LiDAR-based 4D Occupancy Completion and Forecasting](https://github.com/ai4ce/Occ4cast/), arXiv 2023.
 
 # License
 Due to the license of the different original datasets, we release SSCBench under the following licenses:
