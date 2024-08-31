@@ -30,6 +30,7 @@
 
 
 # News
+- [2024/08]: We release [SSCBench-Waymo](dataset/Waymo/) for academic usage.
 - [2023/10]: We release [OCFBench](https://github.com/ai4ce/Occ4cast#ocfbench), a large-scale dataset for OCF, derived from nuScenes, Lyft, Argoverse, and ApolloScape (Waymo is coming soon).
 - [2023/08]: We add demo for SSCBench-PandaSet. We are working on incoporating the dataset
 - [2023/06]: We release [SSCBench-KITTI-360](dataset/KITTI-360/) and [SSCBench-nuScenes](dataset/nuScenes/) for academic usage.
