@@ -16,7 +16,7 @@ import torch
 
 hydra.output_subdir = None
 
-
+CLASS_NUM = 15
 @hydra.main(config_name="../config/monoscene.yaml")
 def main(config: DictConfig):
     exp_name = config.exp_prefix
@@ -46,7 +46,7 @@ def main(config: DictConfig):
     full_scene_size = (256, 256, 32)
     project_scale = 2
     feature = 64
-    n_classes = 16
+    n_classes = CLASS_NUM
     class_weights = torch.from_numpy(
         1 / np.log(waymo_class_frequencies + 0.001)
     )

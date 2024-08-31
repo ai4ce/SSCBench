@@ -14,60 +14,104 @@ We release SSCBench-Waymo under the same license. When you download or use the S
 ## Folder Structure and format
 The folder structure of the Waymo dataset is as follows:
 ```
-dataset/Waymo/
-|-- final_2 # training and validation set
-|   |-- dataset
-|   |   |-- sequences # 500 (train) + 298 (validation) + 202 (test) scenes
-|   |   |   |-- 000
-|   |   |   |   |-- voxels # voxelized point clouds
-|   |   |   |   |   |-- 000.npz # dictionary, ['input'] = voxelized input, ['labels'] = voxelized label, ['invalid'] = voxelized invalid mask
-|   |   |   |   |   |-- 015.npz # sampled every 15 frames, we will provide waymo sampled every 10 frames in the future.
-|   |   |   |   |   |-- 030.npz
-|   |   |   |   |   |-- 045.npz
-|   |   |   |   |   |-- ...
-|   |   |   |-- 001
-|   |   |   |-- 002
-|   |   |   |-- ...
-|   |   |   |-- 999
-|   |-- convert # contains images and calibration information
-|   |   |-- image_2 # 500 (train) + 298 (validation) + 202 (test) scenes
-|   |   |   |-- 000
-|   |   |   |   |-- 0000.png #RGB images
-|   |   |   |   |-- 0001.png
-|   |   |   |   |-- ...
-|   |   |   |-- 001
-|   |   |   |-- 002
-|   |   |   |-- ...
-|   |   |   |-- 999
-|   |   |-- calib # 500 (train) + 298 (validation) + 202 (test) scenes
-|   |   |   |-- 000
-|   |   |   |   |-- calib.txt # calibration information
-|   |   |   |-- 001
-|   |   |   |-- 002
-|   |   |   |-- ...
-|   |   |   |-- 999
-|-- preprocess # preprocessed downsampled labels
-|   |-- labels
+dataset/Waymo/ # 500 (train) + 298 (validation) + 202 (test) scenes
+|-- voxels # training and validation set
 |   |   |-- 000
-|   |   |   |-- 0000_1_1.npy # original labels
-|   |   |   |-- 0000_1_8.npy # 8x downsampled labels
-|   |   |   |-- 0001_1_1.npy
-|   |   |   |-- 0001_1_8.npy
+|   |   |   |-- 000.npz # dictionary, ['input'] = voxelized input, ['labels'] = voxelized label, ['invalid'] = voxelized invalid mask
+|   |   |   |-- 001.npz # labeled key frames only
+|   |   |   |-- 002.npz
+|   |   |   |-- 003.npz
 |   |   |   |-- ...
 |   |   |-- 001
+|   |   |-- 002
 |   |   |-- ...
+|   |   |-- 999
+|-- kitti_format_cam # contains images and calibration information
+|   |-- image_1 # Front camera images
+|   |   |-- 000
+|   |   |   |-- 000.png #RGB images
+|   |   |   |-- 001.png
+|   |   |   |-- ...
+|   |   |-- 001
+|   |   |-- 002
+|   |   |-- ...
+|   |   |-- 999
+|   |-- image_2 # Front left camera images
+|   |   |-- 000
+|   |   |   |-- 000.png #RGB images
+|   |   |   |-- 001.png
+|   |   |   |-- ...
+|   |   |-- 001
+|   |   |-- 002
+|   |   |-- ...
+|   |   |-- 999
+|   |-- image_3 # Front right camera images
+|   |   |-- 000
+|   |   |   |-- 000.png #RGB images
+|   |   |   |-- 001.png
+|   |   |   |-- ...
+|   |   |-- 001
+|   |   |-- 002
+|   |   |-- ...
+|   |   |-- 999
+|   |-- calib1 # Front camera calibrations in KITTI format
+|   |   |-- 000
+|   |   |   |-- calib.txt # calibration information
+|   |   |-- 001
+|   |   |-- 002
+|   |   |-- ...
+|   |   |-- 999
+|   |-- calib2 # Front camera calibrations in KITTI format
+|   |   |-- 000
+|   |   |   |-- calib.txt # calibration information
+|   |   |-- 001
+|   |   |-- 002
+|   |   |-- ...
+|   |   |-- 999
+|   |-- calib3 # Front camera calibrations in KITTI format
+|   |   |-- 000
+|   |   |   |-- calib.txt # calibration information
+|   |   |-- 001
+|   |   |-- 002
+|   |   |-- ...
+|   |   |-- 999
+|-- preprocess # Preprocessed labels for camera-based methods
+|   |-- unified # 11 labels in total
+|   |   |-- labels
+|   |   |   |-- 000
+|   |   |   |   |-- 000_1_1.npy # original labels
+|   |   |   |   |-- 000_1_2.npy # 2x downsampled labels
+|   |   |   |   |-- 000_1_8.npy # 8x downsampled labels
+|   |   |   |   |-- 001_1_1.npy
+|   |   |   |   |-- 001_1_2.npy
+|   |   |   |   |-- 001_1_8.npy
+|   |   |   |   |-- ...
+|   |   |   |-- 001
+|   |   |   |-- ...
+|   |-- not_unified # 15 labels in total
+|   |   |-- labels
+|   |   |   |-- 000
+|   |   |   |   |-- 000_1_1.npy # original labels
+|   |   |   |   |-- 000_1_2.npy # 2x downsampled labels
+|   |   |   |   |-- 000_1_8.npy # 8x downsampled labels
+|   |   |   |   |-- 001_1_1.npy
+|   |   |   |   |-- 001_1_2.npy
+|   |   |   |   |-- 001_1_8.npy
+|   |   |   |   |-- ...
+|   |   |   |-- 001
+|   |   |   |-- ...
 ```
 
 For each frame in the dataset, we provide the following information:
-* `image_2`: RGB image of size 1280x1960.
+* `image_1`: Front camera RGB image of size 1280x1960.
+* `image_2`: Front left camera RGB image of size 1280x1960.
+* `image_3`: Front right camera RGB image of size 1280x1960.
 * `voxels`: Voxelized point cloud of size 256x256x32. Each voxel is a 0.2x0.2x0.2 meter cube.
     * `*.npz`: A dictionary, ['input'] = voxelized point cloud in binary format, ['labels'] = voxelized point cloud label in binary format, ['invalid'] = voxelized point cloud invalid mask in binary format.
 
-For MonoScene and VoxFormer, a preprocessed downsampled version of the dataset is provided in the `preprocess` folder. We provide two scales of downsampled point clouds: 1/1 and 1/8. The downsampled point clouds are stored in the `labels` folder, stored as `.npy` files.
+For MonoScene and VoxFormer, a preprocessed downsampled version of the dataset is provided in the `preprocess` folder. We provide three scales of downsampled point clouds: 1/1, 1/2 and 1/8. The downsampled point clouds are stored in the `labels` folder, stored as `.npy` files.
 
 ## Data Download
-Complying with the Waymo Dataset License Agreement for Non-Commercial Use (August 2019), we are not allowed to redistribute the original data. Please follow the instructions below to download the data.
-
-First, please visit this [site](https://waymo.com/open/licensing/) and agree to the license agreement.
-
-Then, you should be able to download the dataset from [here](https://console.cloud.google.com/storage/browser/waymo_open_dataset_v_1_4_0). Note that we only need the [training](https://console.cloud.google.com/storage/browser/waymo_open_dataset_v_1_4_0/individual_files/training?pageState=(%22StorageObjectListTable%22:(%22f%22:%22%255B%255D%22))&authuser=1&prefix=&forceOnObjectsSortingFiltering=false) and [validation](https://console.cloud.google.com/storage/browser/waymo_open_dataset_v_1_4_0/individual_files/validation?pageState=(%22StorageObjectListTable%22:(%22f%22:%22%255B%255D%22))&authuser=1&prefix=&forceOnObjectsSortingFiltering=false) dataset. There are 1000 tfrecord files in total(798 for training dataset, and 202 for validation dataset).
+The dataset can be downloaded from [google drive](https://drive.google.com/drive/folders/1cERh6BgWM457t0pg08hLIKYMbsuandbv?usp=drive_link). The dataset is provided in the form of squashed file system for easy use for singularity containers. 
+* If you want to use the dataset on a singularity container, you can mount each squashed file system to the container using the `--overlay` option.
+* If you want to use the dataset on a normal system, you can unsquash the file system using the `unsquashfs` command (more details [here](https://manpages.ubuntu.com/manpages/focal/man1/unsquashfs.1.html)). Then, please organize the data as the folder structure described above.
