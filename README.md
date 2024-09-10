@@ -31,6 +31,7 @@
 
 # News
 - [2024/08]: We release [SSCBench-Waymo](dataset/Waymo/) for academic usage.
+- [2024/06]: SSCBench is accepted at IROS 2024!
 - [2023/10]: We release [OCFBench](https://github.com/ai4ce/Occ4cast#ocfbench), a large-scale dataset for OCF, derived from nuScenes, Lyft, Argoverse, and ApolloScape (Waymo is coming soon).
 - [2023/08]: We add demo for SSCBench-PandaSet. We are working on incoporating the dataset
 - [2023/06]: We release [SSCBench-KITTI-360](dataset/KITTI-360/) and [SSCBench-nuScenes](dataset/nuScenes/) for academic usage.
@@ -74,11 +75,11 @@ For more details, please refer to the [dataset](./dataset) folder file.
 If this work is helpful for your research, please cite the following BibTeX entry.
 
 ```
-@article{li2023sscbench,
-      title={SSCBench: Monocular 3D Semantic Scene Completion Benchmark in Street Views}, 
+@inproceedings{li2024sscbench,
+      title={SSCBench: A Large-Scale 3D Semantic Scene Completion Benchmark for Autonomous Driving}, 
       author={Li, Yiming and Li, Sihang and Liu, Xinhao and Gong, Moonjun and Li, Kenan and Chen, Nuo and Wang, Zijun and Li, Zhiheng and Jiang, Tao and Yu, Fisher and Wang, Yue and Zhao, Hang and Yu, Zhiding and Feng, Chen},
-      journal={arXiv preprint arXiv:2306.09001},
-      year={2023}
+      booktitle={2024 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},
+      year={2024}
 }
 ```
 
