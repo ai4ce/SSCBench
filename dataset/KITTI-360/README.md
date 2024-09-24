@@ -1,6 +1,6 @@
 # SSCBench-KITTI-360
-
 ## Change Log
+* 2024/09: SSCBench-KITTI-360 is now available on [Hugging Face](https://huggingface.co/datasets/ai4ce/SSCBench/tree/main/sscbench-kitti)
 * 2023/06: Initial release.
 
 ## Overview
@@ -90,6 +90,9 @@ For each frame in the dataset, we provide the following information:
 For MonoScene and VoxFormer, a preprocessed downsampled version of the dataset is provided in the `preprocess` folder. We provide two scales of downsampled point clouds: 1/1 and 1/8. The downsampled point clouds are stored in the `labels` folder, stored as `.npy` files.
 
 ## Data Download
-The dataset can be downloaded from [google drive](https://drive.google.com/drive/folders/1UReVAtWiOKOQRMa6TG19knGHRdVF6MXB). The dataset is provided in the form of squashed file system for easy use for singularity containers. 
+The dataset can be downloaded from [Hugging Face](https://huggingface.co/datasets/ai4ce/SSCBench/tree/main/sscbench-kitti). The dataset is provided in the form of squashed file system for easy use for singularity containers. Use the following command to merge the split parts of the datasets.
+```
+cat split_parts_* > combined.sqfs
+```
 * If you want to use the dataset on a singularity container, you can mount each squashed file system to the container using the `--overlay` option.
 * If you want to use the dataset on a normal system, you can unsquash the file system using the `unsquashfs` command (more details [here](https://manpages.ubuntu.com/manpages/focal/man1/unsquashfs.1.html)). Then, please organize the data as the folder structure described above.
