@@ -30,6 +30,7 @@
 
 
 # News
+- [2024/09]: SSCBench is now available on [Hugging Face](https://huggingface.co/datasets/ai4ce/SSCBench)
 - [2024/08]: We release [SSCBench-Waymo](dataset/Waymo/) for academic usage.
 - [2024/06]: SSCBench is accepted at IROS 2024!
 - [2023/10]: We release [OCFBench](https://github.com/ai4ce/Occ4cast#ocfbench), a large-scale dataset for OCF, derived from nuScenes, Lyft, Argoverse, and ApolloScape (Waymo is coming soon).
