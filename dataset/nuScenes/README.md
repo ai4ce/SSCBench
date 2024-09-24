@@ -1,7 +1,7 @@
 # SSCBench-nuScenes
 
 ## Change Log
-* 2024/09: SSCBench-nuScenes is not available on [Hugging Face](https://huggingface.co/datasets/ai4ce/SSCBench/tree/main/sscbench-nuscenes)
+* 2024/09: SSCBench-nuScenes is now available on [Hugging Face](https://huggingface.co/datasets/ai4ce/SSCBench/tree/main/sscbench-nuscenes)
 * 2023/06: Initial release.
 
 ## Overview
