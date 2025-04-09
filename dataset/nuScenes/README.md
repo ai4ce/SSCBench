@@ -60,8 +60,6 @@ dataset/nuScenes/
 |   |   |   |-- ...
 |   |-- test
 |   |   |-- ... # same as trainval
-|-- preprocess_uni # unified preprocessed labels
-|   |-- ... # same as preprocess
 ```
 
 For each frame in the dataset, we provide the following information:
