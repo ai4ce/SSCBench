@@ -71,13 +71,6 @@ dataset/kitti360/
 |   |   |   |   |   |-- ...
 |   |   |   |   |-- ... 
 |   |   |   |   |-- 2013_05_28_drive_0010_sync
-|   |-- calibration # preprocessed downsampled labels
-|   |   |-- calib_cam_to_pose.txt
-|   |   |-- calib_cam_to_velo.txt
-|   |   |-- calib_sick_to_velo.txt
-|   |   |-- image_02.yaml
-|   |   |-- image_03.yaml
-|   |   |-- perspective.txt
 ```
 
 For each frame in the dataset, we provide the following information:
